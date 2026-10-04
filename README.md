@@ -55,7 +55,14 @@ In-game verification must be performed manually by the developer/user:
 3. Check that another partial fill adds only the new delta.
 4. Complete or cancel the offer and confirm no duplicate is written.
 5. Reuse the same slot and verify the new offer starts from a clean baseline.
-6. Open RuneMargin Tracker 3.0 and confirm the fill appears under RuneLite Sync.
+6. Open RuneMargin Tracker 3.1 and confirm the fill appears under RuneLite Sync
+   and Profit Journal.
+
+## Version 1.1 compatibility update
+
+RuneMargin Sync 1.1 uses RuneLite's current 64-bit Grand Exchange price and
+spent/received GP fields. This restores compatibility after RuneLite API update
+241 and also prevents overflow on high-value or large-quantity offers.
 
 Do not automate game input while testing.
 
