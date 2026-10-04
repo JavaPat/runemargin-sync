@@ -3,9 +3,9 @@ package com.runemargin.sync;
 final class TradeDelta
 {
     final int quantity;
-    final int gp;
+    final long gp;
 
-    TradeDelta(int quantity, int gp)
+    TradeDelta(int quantity, long gp)
     {
         this.quantity = quantity;
         this.gp = gp;

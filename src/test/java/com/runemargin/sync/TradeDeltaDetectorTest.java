@@ -39,7 +39,18 @@ public class TradeDeltaDetectorTest
         assertNull(TradeDeltaDetector.detect(previous, replacement));
     }
 
-    private static OfferSnapshot offer(int quantitySold, int spent)
+    @Test
+    public void supportsGpTotalsLargerThan32BitIntegers()
+    {
+        OfferSnapshot before = offer(1, 2_500_000_000L);
+        OfferSnapshot after = offer(2, 5_000_000_000L);
+        TradeDelta delta = TradeDeltaDetector.detect(before, after);
+
+        assertEquals(1, delta.quantity);
+        assertEquals(2_500_000_000L, delta.gp);
+    }
+
+    private static OfferSnapshot offer(int quantitySold, long spent)
     {
         return new OfferSnapshot(561, 1005, 100, quantitySold, spent, true, "BUYING");
     }

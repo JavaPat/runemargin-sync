@@ -14,7 +14,7 @@ final class TradeDeltaDetector
         }
 
         int quantity = current.quantitySold - previous.quantitySold;
-        int gp = current.spent - previous.spent;
+        long gp = current.spent - previous.spent;
         return quantity > 0 && gp > 0 ? new TradeDelta(quantity, gp) : null;
     }
 }

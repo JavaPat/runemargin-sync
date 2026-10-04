@@ -8,9 +8,9 @@ final class TradeFillRecord
     final int itemId;
     final boolean buy;
     final int deltaQuantity;
-    final int deltaGp;
+    final long deltaGp;
     final long averagePrice;
-    final int offerPrice;
+    final long offerPrice;
     final int slot;
     final int cumulativeQuantity;
     final int totalQuantity;
@@ -22,9 +22,9 @@ final class TradeFillRecord
         int itemId,
         boolean buy,
         int deltaQuantity,
-        int deltaGp,
+        long deltaGp,
         long averagePrice,
-        int offerPrice,
+        long offerPrice,
         int slot,
         int cumulativeQuantity,
         int totalQuantity,

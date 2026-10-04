@@ -3,19 +3,19 @@ package com.runemargin.sync;
 final class OfferSnapshot
 {
     final int itemId;
-    final int offerPrice;
+    final long offerPrice;
     final int totalQuantity;
     final int quantitySold;
-    final int spent;
+    final long spent;
     final boolean buy;
     final String state;
 
     OfferSnapshot(
         int itemId,
-        int offerPrice,
+        long offerPrice,
         int totalQuantity,
         int quantitySold,
-        int spent,
+        long spent,
         boolean buy,
         String state)
     {
